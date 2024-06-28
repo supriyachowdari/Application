@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Little Lemon</title>
+</head>
+<body>
+    <header>
+	<h1>Menu</h1>
+        <article>
+           
+            <div class="menu-item">
+                <h3>TIKKA SAUCE</h3>
+                <p>$15 - It's a creamy sauce made with tomato, yogurt, heavy cream, Indian spices, including ginger, turmeric, red chili powder, coriander, and cumin. It is slightly sweet and earthy in flavor.</p>
+            </div>
+            <div class="menu-item">
+                <h3>PALAK SAUCE</h3>
+                <p>$15 - A deliciously creamy, vibrant green dish made with mildly spiced fresh spinach.</p>
+            </div>
+            <div class="menu-item">
+                <h3>DAL TADKA</h3>
+                <p>$15 - Dal Tadka is a popular Indian lentil dish made with toor dal husked & split pigeon pea lentils.</p>
+            </div>
+            <div class="menu-item">
+                <h3>MALAI KOFTA</h3>
+                <p>$16 - Home-made paneer and vegetable kofta cooked in a mild creamy sauce along with nuts and aromatic spices. (Paneer +$2 Mixed Vegetables +$1)</p>
+            </div>
+            <div class="menu-item">
+                <h3>DAL PANCHRATNA</h3>
+                <p>$15 - It's a popular lentil-based curry made with 5 different lentils (Dal).</p>
+            </div>
+            <div class="menu-item">
+                <h3>KURMA SAUCE</h3>
+                <p>$15 - It's a delicious gravy made with onions, spices, nuts, yogurt, and coconut.</p>
+            </div>
+            <div class="menu-item">
+                <h3>CHETTINADU SAUCE</h3>
+                <p>$15 - It's a spicy sauce, the key ingredients of which are – fennel seeds, black peppercorns, cumin seeds, dry red chilies, coriander seeds, ginger, and garlic.</p>
+            </div>
+            <div class="menu-item">
+                <h3>ALOO AND GOBI</h3>
+                <p>$14 - Fresh cauliflower and potatoes cooked with ginger, onions, tomato, and herbs.</p>
+            </div>
+            <div class="menu-item">
+                <h3>CHANA MASALA</h3>
+                <p>$14 - Chickpeas cooked with onions, tomatoes, herbs, and traditional spices.</p>
+            </div>
+    <section>
+        <ul>
+            {% for item in menu_items %}
+                <li>{{ item.name }} - {{ item.price }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; {{ current_year }} Supriya's People's Kitchen</p>
+    </footer>
+</body>
+</html>

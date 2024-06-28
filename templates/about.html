@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Supriya's People's Kitchen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 60%; /* Set the width to 60% of the container */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Supriya's People's Kitchen</h1>
+        <p>Welcome to Supriya's People's Kitchen, where we bring you the flavors of the Mediterranean with our traditional recipes and modern twist. Our restaurant is known for its commitment to quality, from our food to our service.</p>
+        <img src="{% static 'img/restaurant_inside.jpg' %}" alt="Supriya's People's Kitchen">
+        <h2>Our Commitment to Quality</h2>
+        <p>At Supriya's People's Kitchen, we are dedicated to providing our guests with the best dining experience possible. Our food is prepared using only the freshest ingredients, sourced locally whenever possible. We take pride in the cleanliness of our restaurant, ensuring that every guest feels comfortable and at home. Our staff is trained to provide exceptional service, making sure that every guest leaves satisfied.</p>
+        <h2>Organic and Sustainable</h2>
+        <p>We are committed to sustainability and environmental responsibility. That's why we use organic ingredients in our dishes whenever possible. By supporting local farmers and producers, we reduce our carbon footprint and support the local economy.</p>
+        <h2>Visit Us Today</h2>
+        <p>Come visit Supriya's People's Kitchen today and experience the best of Mediterranean cuisine. Whether you're dining in with friends and family or ordering takeout, we guarantee a delicious and memorable experience.</p>
+    </div>
+</body>
+</html>
