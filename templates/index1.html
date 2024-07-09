@@ -1,21 +1,14 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supriya's People's Kitchen</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Based in Memphis, TN, People's Kitchen is a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supriya's People's Kitchen</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>People's Kitchen Restaurant</title>
+    <meta name="description" content="A brief description">
+    <meta name="author" content="Based in Chicago, Illinois, Little Lemon is a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.">
+
     <!-- Load favicon -->
     <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
 
@@ -25,26 +18,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text:wght@500&display=swap" rel="stylesheet">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Supriya's People's Kitchen</title>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    </head>
-    <body>
-        <header class="centered-header">
-            <h1 class="restaurant-name">Supriya's People's Kitchen</h1>
-        </header>
+</head>
+<body>
+<header>
+    <img src="{% static 'img/logo.png' %}" alt="People's Kitchen Restaurant" style="width: 5rem; height: 5rem;">
+</header>
 <nav>
     <ul>
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'about' %}">About</a></li>
         <li><a href="{% url 'menu' %}">Menu</a></li>
-        <a href="{% url 'booking' %}">Book </a>
-
+        <li><a href="{% url 'booking' %}">Book</a></li>
+        <li><a href="{% url 'order_online' %}">Order Online</a></li> <!-- Add this line -->
     </ul>
 </nav>
-<body>
 <section>
     <article id="hero">
         <h1 class="heading_shadow">SPECIAL OFFER</h1>
@@ -58,20 +45,24 @@
     </article>
     <article>
         <h2>Our Menu</h2>
-        <p>Indulge in our exquisite menu, showcasing a lavish selection of 12-15 seasonal delicacies, inspired by the rich culinary traditions of Italy, India, Greece, and Turkey..</p>
+        <p>Indulge in our exquisite menu, showcasing a lavish selection of 12-15 seasonal delicacies, inspired by the rich culinary traditions of Italy, India, Greece, and Turkey.</p>
         <p><a href="{% url 'menu' %}">View our menu</a></p>
-
     </article>
     <article>
         <h2>Book a Table</h2>
-        <p>Secure your table now for an extraordinary dining adventure.
-            .</p>
+        <p>Secure your table now for an extraordinary dining adventure.</p>
         <a href="{% url 'booking' %}">Book your table now</a>
-</article>
+    </article>
+    <article>
+        <h2>Order Online</h2>
+        <p>Conveniently order your favorite dishes online for pickup or delivery.</p>
+        <a href="{% url 'order_online' %}">Order now</a>
+    </article>
 </section>
 <footer>
-<p>&copy; {{ current_year }} Supriya's People's Kitchen</p>
+    <article style="background-color: lightslategray;">
+        <p style="color: black;">Copyright {{ current_year }} People's Kitchen</p>
+    </article>
 </footer>
-    </body>
-    </html>
-    
+</body>
+</html>

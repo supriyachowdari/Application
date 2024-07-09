@@ -1,0 +1,6 @@
+{% load static %}
+<form method="post" action="{% url 'process_payment' payment.id %}">
+    {% csrf_token %}
+    <!-- Optionally show payment details here -->
+    <button type="submit">Complete Payment</button>
+</form>
